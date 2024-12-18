@@ -1,0 +1,33 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "windows",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "bin/${hostSystemName}/binary/${presetName}",
+      "installDir": "bin/${hostSystemName}/install/${presetName}",
+      "condition": {
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows",
+        "type": "equals"
+      }
+    },
+    {
+      "name": "debug-x64",
+      "displayName": "Debug x64",
+      "inherits": "windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release-x64",
+      "displayName": "Release x64",
+      "inherits": "windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ]
+}
