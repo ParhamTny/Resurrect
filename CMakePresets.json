@@ -5,8 +5,8 @@
       "name": "windows",
       "hidden": true,
       "generator": "Visual Studio 17 2022",
-      "binaryDir": "bin/${hostSystemName}/binary/${presetName}",
-      "installDir": "bin/${hostSystemName}/install/${presetName}",
+      "binaryDir": "bin/windows/binary/${presetName}",
+      "installDir": "bin/windows/install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Windows",
@@ -14,17 +14,169 @@
       }
     },
     {
-      "name": "debug-x64",
-      "displayName": "Debug x64",
+      "name": "macOS",
+      "hidden": true,
+      "generator": "Xcode",
+      "binaryDir": "bin/macOS/binary/${presetName}",
+      "installDir": "bin/macOS/install/${presetName}",
+      "condition": {
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin",
+        "type": "equals"
+      }
+    },
+    {
+      "name": "linux",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "bin/linux/binary/${presetName}",
+      "installDir": "bin/linux/install/${presetName}",
+      "condition": {
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux",
+        "type": "equals"
+      }
+    },
+    {
+      "name": "windows-debug-x64",
+      "displayName": "Windows Debug x64",
       "inherits": "windows",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
-      "name": "release-x64",
-      "displayName": "Release x64",
+      "name": "windows-release-x64",
+      "displayName": "Windows Release x64",
       "inherits": "windows",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "windows-debug-x86",
+      "displayName": "Windows Debug x86",
+      "inherits": "windows",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "windows-release-x86",
+      "displayName": "Windows Release x86",
+      "inherits": "windows",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "macOS-debug-x64",
+      "displayName": "MacOS Debug x64",
+      "inherits": "macOS",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "macOS-release-x64",
+      "displayName": "MacOS Release x64",
+      "inherits": "macOS",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "macOS-debug-x86",
+      "displayName": "MacOS Debug x86",
+      "inherits": "macOS",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "macOS-release-x86",
+      "displayName": "MacOS Release x86",
+      "inherits": "macOS",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "linux-debug-x64",
+      "displayName": "Linux Debug x64",
+      "inherits": "linux",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-release-x64",
+      "displayName": "Linux Release x64",
+      "inherits": "linux",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "linux-debug-x86",
+      "displayName": "Linux Debug x86",
+      "inherits": "linux",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-release-x86",
+      "displayName": "Linux Release x86",
+      "inherits": "linux",
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
