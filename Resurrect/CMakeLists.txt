@@ -4,6 +4,6 @@ file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.hpp" "${CMAKE_CURRENT_SO
 add_executable(Resurrect ${sources})
 
 target_include_directories(Resurrect PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Include"
-	"${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glfw/include" "${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glm")
+	"${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glfw/include" "${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glm" Vulkan::Headers)
 
 target_link_libraries(Resurrect PRIVATE glfw Vulkan::Vulkan)
