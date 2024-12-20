@@ -5,8 +5,8 @@
       "name": "windows",
       "hidden": true,
       "generator": "Visual Studio 17 2022",
-      "binaryDir": "bin/windows/binary/${presetName}",
-      "installDir": "bin/windows/install/${presetName}",
+      "binaryDir": "bin/binary/${presetName}",
+      "installDir": "bin/install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Windows",
@@ -17,8 +17,8 @@
       "name": "macOS",
       "hidden": true,
       "generator": "Xcode",
-      "binaryDir": "bin/macOS/binary/${presetName}",
-      "installDir": "bin/macOS/install/${presetName}",
+      "binaryDir": "bin/binary/${presetName}",
+      "installDir": "bin/install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Darwin",
@@ -29,8 +29,8 @@
       "name": "linux",
       "hidden": true,
       "generator": "Ninja",
-      "binaryDir": "bin/linux/binary/${presetName}",
-      "installDir": "bin/linux/install/${presetName}",
+      "binaryDir": "bin/binary/${presetName}",
+      "installDir": "bin/install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Linux",
