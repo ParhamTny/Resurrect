@@ -2,11 +2,11 @@
   "version": 8,
   "configurePresets": [
     {
-      "name": "windows",
+      "name": "Windows",
       "hidden": true,
       "generator": "Ninja",
-      "binaryDir": "bin/binary/${presetName}",
-      "installDir": "bin/install/${presetName}",
+      "binaryDir": "Build/Binary/${presetName}",
+      "installDir": "Build/Install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Windows",
@@ -14,11 +14,11 @@
       }
     },
     {
-      "name": "macOS",
+      "name": "MacOS",
       "hidden": true,
       "generator": "Xcode",
-      "binaryDir": "bin/binary/${presetName}",
-      "installDir": "bin/install/${presetName}",
+      "binaryDir": "Build/Binary/${presetName}",
+      "installDir": "Build/Install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Darwin",
@@ -26,11 +26,11 @@
       }
     },
     {
-      "name": "linux",
+      "name": "Linux",
       "hidden": true,
       "generator": "Ninja",
-      "binaryDir": "bin/binary/${presetName}",
-      "installDir": "bin/install/${presetName}",
+      "binaryDir": "Build/Binary/${presetName}",
+      "installDir": "Build/Install/${presetName}",
       "condition": {
         "lhs": "${hostSystemName}",
         "rhs": "Linux",
@@ -38,11 +38,11 @@
       }
     },
     {
-      "name": "windows-debug-x64",
-      "displayName": "Windows Debug x64",
-      "inherits": "windows",
+      "name": "Windows-Debug-X64",
+      "displayName": "Windows Debug X64",
+      "inherits": "Windows",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -50,11 +50,11 @@
       }
     },
     {
-      "name": "windows-release-x64",
-      "displayName": "Windows Release x64",
-      "inherits": "windows",
+      "name": "Windows-Release-X64",
+      "displayName": "Windows Release X64",
+      "inherits": "Windows",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -62,11 +62,11 @@
       }
     },
     {
-      "name": "windows-debug-x86",
-      "displayName": "Windows Debug x86",
-      "inherits": "windows",
+      "name": "Windows-Debug-X86",
+      "displayName": "Windows Debug X86",
+      "inherits": "Windows",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -74,11 +74,11 @@
       }
     },
     {
-      "name": "windows-release-x86",
-      "displayName": "Windows Release x86",
-      "inherits": "windows",
+      "name": "Windows-Release-X86",
+      "displayName": "Windows Release X86",
+      "inherits": "Windows",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -86,11 +86,11 @@
       }
     },
     {
-      "name": "macOS-debug-x64",
-      "displayName": "MacOS Debug x64",
-      "inherits": "macOS",
+      "name": "MacOS-Debug-X64",
+      "displayName": "MacOS Debug X64",
+      "inherits": "MacOS",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -98,11 +98,11 @@
       }
     },
     {
-      "name": "macOS-release-x64",
-      "displayName": "MacOS Release x64",
-      "inherits": "macOS",
+      "name": "MacOS-Release-X64",
+      "displayName": "MacOS Release X64",
+      "inherits": "MacOS",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -110,11 +110,11 @@
       }
     },
     {
-      "name": "macOS-debug-x86",
-      "displayName": "MacOS Debug x86",
-      "inherits": "macOS",
+      "name": "MacOS-Debug-X86",
+      "displayName": "MacOS Debug X86",
+      "inherits": "MacOS",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -122,11 +122,11 @@
       }
     },
     {
-      "name": "macOS-release-x86",
-      "displayName": "MacOS Release x86",
-      "inherits": "macOS",
+      "name": "MacOS-Release-X86",
+      "displayName": "MacOS Release X86",
+      "inherits": "MacOS",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -134,11 +134,11 @@
       }
     },
     {
-      "name": "linux-debug-x64",
-      "displayName": "Linux Debug x64",
-      "inherits": "linux",
+      "name": "Linux-Debug-X64",
+      "displayName": "Linux Debug X64",
+      "inherits": "Linux",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -146,11 +146,11 @@
       }
     },
     {
-      "name": "linux-release-x64",
-      "displayName": "Linux Release x64",
-      "inherits": "linux",
+      "name": "Linux-Release-X64",
+      "displayName": "Linux Release X64",
+      "inherits": "Linux",
       "architecture": {
-        "value": "x64",
+        "value": "X64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -158,11 +158,11 @@
       }
     },
     {
-      "name": "linux-debug-x86",
-      "displayName": "Linux Debug x86",
-      "inherits": "linux",
+      "name": "Linux-Debug-X86",
+      "displayName": "Linux Debug X86",
+      "inherits": "Linux",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -170,11 +170,11 @@
       }
     },
     {
-      "name": "linux-release-x86",
-      "displayName": "Linux Release x86",
-      "inherits": "linux",
+      "name": "Linux-Release-X86",
+      "displayName": "Linux Release X86",
+      "inherits": "Linux",
       "architecture": {
-        "value": "x86",
+        "value": "X86",
         "strategy": "external"
       },
       "cacheVariables": {
