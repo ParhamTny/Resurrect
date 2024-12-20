@@ -28,6 +28,9 @@ namespace Resurrect
 			glfwSetWindowPos(m_Window, position.first, position.second);
 		}
 
+		if (!m_Window)
+			throw std::runtime_error("Failed to create the window");
+
 		glfwSetWindowUserPointer(m_Window, this);
 
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
