@@ -1,9 +1,9 @@
-#include <iostream>
+#include <Resurrect/Resurrect.hpp>
 
 int main()
 {
-	std::cout << "Hello world" << std::endl;
+	Resurrect::Window window("Resurrect window", { 800, 600 }, { 100, 100 });
+	while (!window.ShouldClose());
 
-	std::cin.get();
 	return 0;
 }
