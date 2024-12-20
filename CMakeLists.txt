@@ -10,3 +10,14 @@ if(Vulkan_FOUND)
 else()
 	message(FATAL_ERROR "Vulkan not found, download the Vulkan SDK before running this application")
 endif()
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glfw")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glm")
+
+file(GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.hpp" "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp")
+add_executable(Resurrect ${sources})
+
+target_include_directories(Resurrect PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Source"
+	"${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glfw/include" "${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Glm")
+
+target_link_libraries(Resurrect PRIVATE glfw Vulkan::Vulkan)
